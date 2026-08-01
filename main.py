@@ -4,8 +4,15 @@ from pyrogram import Client, idle
 
 from config.config import API_ID, API_HASH, BOT_TOKEN, PORT
 
+# Bot client
 bot = Client("NovaBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
+# Import handlers so they register
+import handlers.start
+import handlers.security
+# agar aur handlers hain to unko bhi yahan import karo
+
+# Web app
 app = web.Application()
 
 async def run_web():

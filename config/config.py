@@ -18,6 +18,7 @@ OWNER_ID = int(os.getenv("OWNER_ID"))
 OWNER_USERNAME = os.getenv("OWNER_USERNAME")
 
 RESTRICTED_PERMISSIONS = ChatPermissions(can_send_messages=False)
+
 FULL_PERMISSIONS = ChatPermissions(
     can_send_messages=True,
     can_send_media_messages=True,

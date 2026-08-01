@@ -1,0 +1,34 @@
+{
+  "name": "NovaBot",
+  "description": "Telegram Security Bot with Moderation & Anti-Spam",
+  "repository": "https://github.com/AMMUKASH/NOVA-bio-link",
+  "keywords": ["telegram", "bot", "pyrogram", "security"],
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "MongoDB Connection URL",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Bot Owner Telegram ID",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "stack": "heroku-22"
+}

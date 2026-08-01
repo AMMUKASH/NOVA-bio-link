@@ -1,39 +1,39 @@
-# ⚡ NovaBot Security Engine ⚡
+# ⚡ NOVA Bio Link Bot ⚡
 
-NovaBot is an advanced Telegram security bot that protects your groups from spam, unwanted links, and malicious users.  
-It comes with **moderation tools, owner commands, and auto security scanning**.
+NovaBot is a Telegram security bot that protects your groups from spam links, unwanted users, and provides moderation tools.
 
 ---
 
-## 🚀 Features
+## 🚀 Deployment Options
+
+### 🔥 Deploy on Heroku
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AMMUKASH/NOVA-bio-link)
+
+---
+
+### ⚡ Deploy on Render
+[![Deploy to Render](https://img.shields.io/badge/Deploy%20to-Render-blue?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/AMMUKASH/NOVA-bio-link)
+
+---
+
+### 🖥️ VPS Setup Guide
+[![VPS Guide](https://img.shields.io/badge/Setup-VPS-green?style=for-the-badge&logo=linux)](https://github.com/AMMUKASH/NOVA-bio-link/wiki/VPS-Setup)
+
+---
+
+## 📋 Features
 - Bio & Name Scanner
-- Admin Bypass
 - Whitelist System
-- Auto Actions (Warn / Mute / Ban)
+- Auto Warn / Mute / Ban
 - Owner Commands (Stats, Broadcast, Backup)
 - Interactive Help Menu
 
 ---
 
-## 📂 Repo StructureNovaBot/ │── config/          → Bot settings & environment │── database/        → MongoDB connection │── handlers/        → Commands (start, help, moderation, owner, security) │── utils/           → Helpers, permissions, buttons │── main.py          → Entry point │── requirements.txt → Dependencies │── README.md        → Documentation │── .gitignore       → Ignore unnecessary files │── Dockerfile       → Containerized deployment │── render.yaml      → Render deployment config │── Procfile         → Heroku deployment config
-
----
-
-## ⚙️ Setup
-
+## ⚙️ Quick Start
 1. Clone repo:
    ```bash
-   git clone https://github.com/yourusername/NovaBot.git
-   cd NovaBotCreate virtual environment:bashCopypython -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # WindowsInstall dependencies:bashCopypip install -r requirements.txt
+   git clone https://github.com/AMMUKASH/NOVA-bio-link.git
+   cd NOVA-bio-link
 
-Configure .env file:envCopyAPI_ID=12345
-API_HASH=your_api_hash
-BOT_TOKEN=your_bot_token
-MONGO_URL=mongodb://localhost:27017
-OWNER_ID=123456789Run bot:bashCopypython main.py☁️ Deployment Options🔥 HerokuAdd Procfile → worker: python main.pySet environment variables via heroku config:set⚡ Renderhttps://render.com/deployAdd render.yaml → Render auto builds worker serviceConfigure secrets in Render dashboard
-
-VPSca://s?q=Deploy_NovaBot_on_VPSInstall Python + MongoDBRun docker-compose up -d (optional)Add cronjobs.sh in crontab for auto restart🛠️ Cronjobs Example (VPS)bashCopy0 0 * * * /path/to/cronjobs.sh📊 Owner Commands/stats → Show bot stats/broadcast → Broadcast message to all users/backup → Export MongoDB backup🛡️ Moderation Commands/whitelist @user → Whitelist user/unwhitelist @user → Remove from whitelist/mute @user → Mute user/unmute @user → Unmute user/ban @user → Ban user/unban @user → Unban user/tmute @user 10m → Temp mute
-
-General Commands/start → Welcome caption + buttons/help → Interactive help menu
+   Install dependencies:bashCopypip install -r requirements.txtConfigure .env file with your API_ID, API_HASH, BOT_TOKEN, MONGO_URL.Run bot:bashCopypython main.py

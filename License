@@ -1,13 +1,13 @@
-MIT License © 2026 NovaBotCopy---
+---
 
 ### ✅ Highlights
-- Attractive **Heroku, Render, VPS buttons**.  
-- Clear **setup guide**.  
-- Full **command list**.  
-- Professional **repo structure**.  
+- **Heroku button** → one‑click deploy.  
+- **Render button** → direct deploy link.  
+- **VPS button** → points to repo wiki guide (you can add VPS setup steps there).  
+- Short, clean, professional README.  
 
 ---
 
-X, ab tumhare repo ke liye ek **complete README.md** ready hai jisme Heroku, Render aur VPS ke alag‑alag deploy buttons bhi hain. Ye GitHub pe publish karne ke liye perfect hai.  
+X, ab tumhare repo ke liye ek **short README with deploy buttons** ready hai. Ye GitHub pe attractive lagega aur har button pe click karte hi user apne hosting option pe chala jaayega.  
 
-Agle step ke liye, chaho to main tumhare liye ek **badges section** bhi bana kar de sakta hoon (Python version, License, Build Status) taaki README aur zyada professional lage. Kya tumhe wo bhi ready chahiye?
+Agle step ke liye, chaho to main tumhare liye ek **wiki page content** bhi bana kar de sakta hoon jisme VPS setup ka detailed guide ho (Python, MongoDB, Docker, cronjobs). Kya tumhe wo bhi ready chahiye?

@@ -35,4 +35,31 @@ async def group_security_scanner(client, message: Message):
     has_link = False
     text_content = message.text or message.caption or ""
 
-    if URL_PATTERN.search(text
+    # ✅ Corrected line
+    if URL_PATTERN.search(text_content):
+        has_link = True
+
+    if has_link:
+        settings = get_group_settings(chat_id)
+        action = settings.get("action", "all")
+
+        if action == "warn":
+            warns_col.update_one({"chat_id": chat_id, "user_id": user.id}, {"$inc": {"warns": 1}}, upsert=True)
+            await message.reply_text("⚠️ Link detected! You have been warned.")
+            await auto_delete_msg(message)
+
+        elif action == "mute":
+            await client.restrict_chat_member(chat_id, user.id, RESTRICTED_PERMISSIONS)
+            await message.reply_text("🔇 Link detected! User muted.")
+            await auto_delete_msg(message)
+
+        elif action == "ban":
+            await client.ban_chat_member(chat_id, user.id)
+            await message.reply_text("🚫 Link detected! User banned.")
+            await auto_delete_msg(message)
+
+        elif action == "all":
+            warns_col.update_one({"chat_id": chat_id, "user_id": user.id}, {"$inc": {"warns": 1}}, upsert=True)
+            await client.restrict_chat_member(chat_id, user.id, RESTRICTED_PERMISSIONS)
+            await message.reply_text("⚠️ Link detected! Warn + Mute applied.")
+            await auto_delete_msg(message)

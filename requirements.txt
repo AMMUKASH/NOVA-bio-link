@@ -1,18 +1,6 @@
-# Core framework
 pyrogram==2.0.106
-
-# Database driver
-pymongo==4.6.1
-
-# Web server (for health checks)
-aiohttp==3.9.5
-
-# Speed boost for Pyrogram
-TgCrypto==1.2.5
-
-# Environment variable loader
-python-dotenv==1.0.1
-
-# Linting & testing (optional, for CI/CD)
-flake8==7.1.1
-pytest==8.3.2
+tgcrypto
+aiohttp
+motor
+pymongo
+python-dotenv

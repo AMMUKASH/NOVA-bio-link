@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  novabot:
+    build: .
+    container_name: novabot
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - API_ID=12345
+      - API_HASH=your_api_hash
+      - BOT_TOKEN=your_bot_token
+      - MONGO_URL=mongodb://mongo:27017
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: novabot_mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
